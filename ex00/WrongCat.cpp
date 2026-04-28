@@ -13,12 +13,14 @@
 #include "WrongCat.hpp"
 
 WrongCat::WrongCat(void)
+	: WrongAnimal()
 {
 	this->type = "WrongCat";
 	std::cout << "WrongCat constructor called" << std::endl;
 }
 
 WrongCat::WrongCat(const WrongCat& other)
+	: WrongAnimal()
 {
 	*this = other;
 	std::cout << "Copy constructor called" << std::endl;

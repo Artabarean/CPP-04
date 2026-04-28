@@ -13,12 +13,14 @@
 #include "Cat.hpp"
 
 Cat::Cat(void)
+	: Animal()
 {
 	this->type = "Cat";
 	std::cout << "Cat constructor called" << std::endl;
 }
 
 Cat::Cat(const Cat& other)
+	: Animal()
 {
 	*this = other;
 	std::cout << "Copy constructor called" << std::endl;
