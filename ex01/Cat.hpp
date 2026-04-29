@@ -13,13 +13,16 @@
 #pragma once
 
 #include "Animal.hpp"
+#include "Brain.hpp"
 
-class Cat : public Animal
+class Cat : public Animal, public Brain
 {
 	public:
 		Cat(void);
 		Cat(const Cat&);
 		~Cat(void);
-		Cat& operator=(const Cat&); 
+		Cat& operator=(const Cat&);
+	private:
+		Brain *Brain;
 
 };
