@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:40:16 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:21:37 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/04/30 12:51:05 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ Animal::Animal(const Animal&other)
 Animal::~Animal(void)
 {
 	std::cout << "Animal destructor called" << std::endl;
+	
 }
 
 std::string Animal::getType(void) const

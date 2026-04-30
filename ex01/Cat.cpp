@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:00:06 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:21:28 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/04/30 12:23:29 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 Cat::Cat(void)
 	: Animal()
 {
-	this->Brain = new Brain();
+	this->_brain = new Brain;
 	this->type = "Cat";
 	std::cout << "Cat constructor called" << std::endl;
 }
@@ -23,19 +23,25 @@ Cat::Cat(void)
 Cat::Cat(const Cat& other)
 	: Animal()
 {
-	*this = other;
+	this->_brain = other._brain->clone();
+	this->type = other.getType();
 	std::cout << "Copy constructor called" << std::endl;
 }
 
 Cat::~Cat(void)
 {
 	std::cout << "Cat destructor called" << std::endl;
-	delete this->Brain;
+	delete this->_brain;
+}
+
+Brain *Cat::get_brain(void)
+{
+	return (this->_brain);
 }
 
 Cat& Cat::operator=(const Cat& other)
 {
-	this->Brain = other.Brain;
+	*this->_brain = *other._brain;
 	this->type = other.getType();
 	return (*this);
 }

@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:35:22 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:12:54 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/04/30 12:53:18 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@ class Animal
 	public:
 		Animal(void);
 		Animal(const Animal&);
-		~Animal(void);
+		virtual ~Animal(void);
 		void makeSound(void) const;
 		std::string getType(void) const;
 		Animal& operator=(const Animal&);

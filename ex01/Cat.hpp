@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:59:01 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:19:20 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/04/30 12:23:25 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,14 +15,15 @@
 #include "Animal.hpp"
 #include "Brain.hpp"
 
-class Cat : public Animal, public Brain
+class Cat : public Animal
 {
 	public:
 		Cat(void);
 		Cat(const Cat&);
 		~Cat(void);
+		Brain *get_brain(void);
 		Cat& operator=(const Cat&);
 	private:
-		Brain *Brain;
+		Brain *_brain;
 
 };
