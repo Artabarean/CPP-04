@@ -1,0 +1,47 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2026/04/23 12:00:06 by atabarea          #+#    #+#             */
+/*   Updated: 2026/04/30 12:23:29 by atabarea         ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
+#include "Cat.hpp"
+
+Cat::Cat(void)
+	: A_Animal()
+{
+	this->_brain = new Brain;
+	this->type = "Cat";
+	std::cout << "Cat constructor called" << std::endl;
+}
+
+Cat::Cat(const Cat& other)
+	: A_Animal()
+{
+	this->_brain = other._brain->clone();
+	this->type = other.getType();
+	std::cout << "Copy constructor called" << std::endl;
+}
+
+Cat::~Cat(void)
+{
+	std::cout << "Cat destructor called" << std::endl;
+	delete this->_brain;
+}
+
+Brain *Cat::get_brain(void)
+{
+	return (this->_brain);
+}
+
+Cat& Cat::operator=(const Cat& other)
+{
+	*this->_brain = *other._brain;
+	this->type = other.getType();
+	return (*this);
+}
