@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 11:00:05 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/30 13:06:27 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:03:22 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,24 +16,25 @@
 
 int main()
 {
-	const Animal* Anarray[10];
-	int i = 0;
-	while(i < 5)
-	{
-		std::cout << "animal:" << i << std::endl;
-		Anarray[i] = new Cat();
-		i++;
-	}
-	while(i < 10)
-	{
-		std::cout << "animal:" << i << std::endl;
-		Anarray[i] = new Dog();
-		i++;
-	}
-	for(int j = 0; j < 10; j++)
-	{
-		delete Anarray[j];
-	}
+	// const Animal* Anarray[10];
+	// int i = 0;
+	// while(i < 5)
+	// {
+	// 	std::cout << "animal:" << i << std::endl;
+	// 	Anarray[i] = new Cat();
+	// 	i++;
+	// }
+	// while(i < 10)
+	// {
+	// 	std::cout << "animal:" << i << std::endl;
+	// 	Anarray[i] = new Dog();
+	// 	i++;
+	// }
+	// for(int j = 0; j < 10; j++)
+	// {
+	// 	delete Anarray[j];
+	// }
+
 	// Dog *i = new Dog();
 	// Dog *j = new Dog(*i);
 	// i->get_brain()->change_idea(1, "hola");
@@ -42,7 +43,12 @@ int main()
 	// j->get_brain()->change_idea(2, "adios");
 	// j->get_brain()->print_ideas();
 	// i->get_brain()->print_ideas();
-	// delete i;
 	// delete j;
+
+	// Dog basic;
+	// {
+	// 	Dog tmp = basic;
+	// }
+	// std::cout << "hola" << std::endl;
 	return (0);
 }

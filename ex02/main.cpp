@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/30 11:00:05 by atabarea          #+#    #+#             */
-/*   Updated: 2026/05/07 11:17:41 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 12:12:46 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,35 +16,19 @@
 
 int main()
 {
-	// const A_Animal* Anarray[10];
-	// int i = 0;
-	// while(i < 5)
-	// {
-	// 	std::cout << "A_Animal:" << i << std::endl;
-	// 	Anarray[i] = new Cat();
-	// 	Anarray[i]->makeSound();
-	// 	i++;
-	// }
-	// while(i < 10)
-	// {
-	// 	std::cout << "A_Animal:" << i << std::endl;
-	// 	Anarray[i] = new Dog();
-	// 	Anarray[i]->makeSound();
-	// 	i++;
-	// }
-	// for(int j = 0; j < 10; j++)
-	// {
-	// 	delete Anarray[j];
-	// }
-	Dog *i = new Dog();
-	Dog *j = new Dog(*i);
-	i->get_brain()->change_idea(1, "hola");
-	i->get_brain()->print_ideas();
-	j->get_brain()->print_ideas();
-	j->get_brain()->change_idea(2, "adios");
-	j->get_brain()->print_ideas();
-	i->get_brain()->print_ideas();
-	delete i;
-	delete j;
+	//const A_Animal* meta = new A_Animal();
+
+	A_Animal* test = new Cat();
+	test->makeSound();
+	delete(test);
+	
+	const A_Animal* j = new Dog();
+	const A_Animal* i = new Cat();
+	std::cout << j->getType() << " " << std::endl;
+	std::cout << i->getType() << " " << std::endl;
+	j->makeSound();
+	i->makeSound();
+	delete(j);
+	delete(i);
 	return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:40:16 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/30 12:51:05 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:46:43 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,7 @@ std::string Animal::getType(void) const
 
 void	Animal::makeSound(void) const
 {
-	if (this->getType() == "Dog")
-		std::cout << "Woof" << std::endl;
-	if (this->getType() == "Cat")
-		std::cout << "Miau" << std::endl;
-	if (this->getType() == "")
-		std::cout << "..." << std::endl;	
+	std::cout << "Generic sound" << std::endl;
 }
 
 Animal& Animal::operator=(const Animal& other)
