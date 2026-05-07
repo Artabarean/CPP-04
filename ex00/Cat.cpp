@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:00:06 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:21:28 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:24:02 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ Cat::Cat(const Cat& other)
 Cat::~Cat(void)
 {
 	std::cout << "Cat destructor called" << std::endl;
+}
+
+void	Cat::makeSound(void) const
+{
+	std::cout << "Miau" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other)

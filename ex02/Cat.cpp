@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:00:06 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/30 12:23:29 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 10:10:06 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,6 +37,11 @@ Cat::~Cat(void)
 Brain *Cat::get_brain(void)
 {
 	return (this->_brain);
+}
+
+void	Cat::makeSound(void) const
+{
+	std::cout << "Miau" << std::endl;
 }
 
 Cat& Cat::operator=(const Cat& other)

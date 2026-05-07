@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Animal.cpp                                         :+:      :+:    :+:   */
+/*   A_Animal.cpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:40:16 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/30 12:51:05 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 10:08:26 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,12 +37,7 @@ std::string A_Animal::getType(void) const
 
 void	A_Animal::makeSound(void) const
 {
-	if (this->getType() == "Dog")
-		std::cout << "Woof" << std::endl;
-	if (this->getType() == "Cat")
-		std::cout << "Miau" << std::endl;
-	if (this->getType() == "")
-		std::cout << "..." << std::endl;	
+	std::cout << "Generic sound" << std::endl;
 }
 
 A_Animal& A_Animal::operator=(const A_Animal& other)

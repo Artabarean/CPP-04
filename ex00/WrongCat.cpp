@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:29:22 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:36:32 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:29:30 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ WrongCat::WrongCat(const WrongCat& other)
 WrongCat::~WrongCat(void)
 {
 	std::cout << "WrongCat destructor called" << std::endl;
+}
+
+void	WrongCat::makeSound(void) const
+{
+	std::cout << "Croak" << std::endl;
 }
 
 WrongCat& WrongCat::operator=(const WrongCat& other)

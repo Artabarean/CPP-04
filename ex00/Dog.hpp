@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:54:34 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:22:52 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:24:49 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class Dog : public Animal
 		Dog(void);
 		Dog(const Dog&);
 		~Dog(void);
+		void makeSound(void) const;
 		Dog& operator=(const Dog&);
 	
 };

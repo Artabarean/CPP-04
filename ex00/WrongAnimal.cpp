@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 12:29:20 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:40:00 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:32:37 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,8 +36,7 @@ std::string WrongAnimal::getType(void) const
 
 void	WrongAnimal::makeSound(void) const
 {
-	if (this->getType() == "WrongCat")
-		std::cout << "croak" << std::endl;
+	std::cout << "Wrong generic sound" << std::endl;
 }
 
 WrongAnimal& WrongAnimal::operator=(const WrongAnimal& other)

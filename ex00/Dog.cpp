@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:54:11 by atabarea          #+#    #+#             */
-/*   Updated: 2026/04/23 12:23:06 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/07 11:25:14 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,6 +29,11 @@ Dog::Dog(const Dog& other)
 Dog::~Dog(void)
 {
 	std::cout << "Dog destructor called" << std::endl;
+}
+
+void	Dog::makeSound(void) const
+{
+	std::cout << "Woof" << std::endl;
 }
 
 Dog& Dog::operator=(const Dog& other)
