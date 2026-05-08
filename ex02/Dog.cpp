@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/04/23 11:54:11 by atabarea          #+#    #+#             */
-/*   Updated: 2026/05/07 10:10:21 by atabarea         ###   ########.fr       */
+/*   Updated: 2026/05/08 10:19:48 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -46,6 +46,7 @@ void	Dog::makeSound(void) const
 
 Dog& Dog::operator=(const Dog& other)
 {
+	*this->_brain = *other._brain;
 	this->type = other.getType();
 	return (*this);
 }
